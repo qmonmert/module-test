@@ -1,0 +1,13 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+
+[jnt:account] > jnt:content, jmix:structuredContent
+- lastname (String)
+- firstname (String)
+
+[jnt:createAccount] > jnt:content, jmix:structuredContent
+
+[jnt:accounts] > jnt:content, jmix:structuredContent
+
+[jnt:angular] > jnt:content, jmix:structuredContent
