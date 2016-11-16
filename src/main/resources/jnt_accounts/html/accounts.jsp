@@ -33,8 +33,12 @@
   <tbody>
     <c:forEach items="${res.nodes}" var="stravaActivity" varStatus="status">
         <tr>
-          <td>${stravaActivity.properties['lastname'].string}</td>
-          <td>${stravaActivity.properties['firstname'].string}</td>
+            <td>
+                <a href="<c:url value="${url.base}${stravaActivity.path}.html"/>">
+                    ${stravaActivity.properties['lastname'].string}
+                </a>
+            </td>
+            <td>${stravaActivity.properties['firstname'].string}</td>
         </tr>
     </c:forEach>
   </tbody>

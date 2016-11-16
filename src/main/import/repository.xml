@@ -11,8 +11,72 @@
                 <files jcr:primaryType="jnt:folder"/>
                 <contents jcr:primaryType="jnt:contentFolder"/>
                 <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
-                    <files jcr:primaryType="jnt:folder"/>
+                    <files jcr:primaryType="jnt:folder">
+                        <velo.jpg j:height="400"
+                         j:width="400"
+                         j:xresolution="1 dot"
+                         j:yresolution="1 dot"
+                         jcr:mixinTypes="jmix:exif jmix:image"
+                         jcr:primaryType="jnt:file">
+                            <jcr:content jcr:mimeType="image/jpeg" jcr:primaryType="jnt:resource"/>
+                            <thumbnail jcr:mimeType="image/jpeg" jcr:primaryType="jnt:resource"/>
+                            <thumbnail2 jcr:mimeType="image/jpeg" jcr:primaryType="jnt:resource"/>
+                        </velo.jpg>
+                    </files>
                     <contents jcr:primaryType="jnt:contentFolder"/>
+                    <module-test-base-template j:hiddenTemplate="false" jcr:primaryType="jnt:template">
+                        <j:translation_fr jcr:language="fr"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="module test base template"/>
+                        <module-test-page-template j:hiddenTemplate="false" jcr:primaryType="jnt:pageTemplate">
+                            <j:translation_fr jcr:language="fr"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="module test page template"/>
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <my-banner jcr:primaryType="jnt:banner">
+                                    <j:translation_fr background="/modules/module-test/templates/files/velo.jpg"
+                                          cast="&lt;p&gt;&lt;strong&gt;Banner (template page)&lt;/strong&gt;&lt;/p&gt;&#xA;"
+                                          jcr:language="fr"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="my banner"/>
+                                </my-banner>
+                                <area24166 j:allowedTypes="jnt:angular" jcr:primaryType="jnt:area">
+                                    <area24166 jcr:primaryType="jnt:contentList">
+                                        <angular jcr:primaryType="jnt:angular"/>
+                                    </area24166>
+                                </area24166>
+                                <absolute-area98439 j:allowedTypes="jnt:bigText jnt:text"
+                                         j:limitedAbsoluteAreaEdit="false"
+                                         jcr:primaryType="jnt:absoluteArea"/>
+                            </pagecontent>
+                        </module-test-page-template>
+                        <content-template j:applyOn="jnt:account"
+                                 j:defaultTemplate="true"
+                                 j:hiddenTemplate="false"
+                                 j:priority="999"
+                                 j:view="default"
+                                 jcr:primaryType="jnt:contentTemplate">
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <my-banner-content-template jcr:primaryType="jnt:banner">
+                                    <j:translation_fr background="/modules/module-test/templates/files/velo.jpg"
+                                          cast="&lt;p&gt;&lt;span style=&#34;color:#008000;&#34;&gt;&lt;strong&gt;Content template&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&#xA;"
+                                          jcr:language="fr"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="my banner (content template)"/>
+                                </my-banner-content-template>
+                                <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                <rich-text jcr:primaryType="jnt:bigText">
+                                    <j:translation_fr jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"
+                                          text="&lt;p&gt;&lt;span style=&#34;color:#0000CD;&#34;&gt;&lt;em&gt;Footer (page content)&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;&#xA;"/>
+                                </rich-text>
+                            </pagecontent>
+                        </content-template>
+                    </module-test-base-template>
                 </templates>
                 
             </module-test>
